@@ -89,3 +89,6 @@ less_than_five = [fruit for fruit in fruits if (len(fruit) < 5)]
 
 # 8. Make a list containing the number of characters in each fruit.
 char_count = [len(fruit) for fruit in fruits]
+
+# 9. Make a variable named fruits_with_letter_a that contains a list of only the fruits that contain the letter "a"
+fruits_with_letter_a = 
