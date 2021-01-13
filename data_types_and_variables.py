@@ -54,6 +54,7 @@ max_twenty = len(username) <= 20
 # c. the password must not be the same as the username
 pswd_diff_from_user = password != username
 
+
 # LIST COMPREHENSION EXERCISES
 
 # 1. Make a variable named uppercased_fruits to hold the output
@@ -63,11 +64,28 @@ uppercased_fruits = [fruit.upper() for fruit in fruits]
 capitalized_fruits = [fruit.title() for fruit in fruits]
 
 # 3. Make a variable named fruits_with_more_than_two_vowels
-v = ('a', 'e', 'i', 'o', 'u')
-fruits_with_more_than_two_vowels = [fruit for fruit in fruits if v > 2]
+def count_vowels(string):
+    count = 0
+    for element in string:
+        if element.lower() in ('aeiou'):
+            count += 1
+    return count
+
+fruits_with_more_than_two_vowels = [fruit for fruit in fruits if count_vowels(fruit) > 2]
+fruits_with_more_than_two_vowels
+
+# 4. Make a variable named fruits_with_only_two_vowels
+fruits_with_only_two_vowels = [fruit for fruit in fruits if count_vowels(fruit) == 2]
 
 # 5. Make a list that contains each fruit with more than 5 characters
-more_than_five = [len(fruit) for fruit in fruits]
+more_than_five = [fruit for fruit in fruits if (len(fruit) > 5)]
 
 # 6. Make a list that contains each fruit with exactly 5 characters
+exactly_five = [fruit for fruit in fruits where (len(fruit) == 5)]
 
+# 7. Make a list that contains fruits that have less than 5 characters
+
+less_than_five = [fruit for fruit in fruits if (len(fruit) < 5)]
+
+# 8. Make a list containing the number of characters in each fruit.
+char_count = [len(fruit) for fruit in fruits]
