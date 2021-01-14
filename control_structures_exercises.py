@@ -279,7 +279,8 @@
     "\n",
     "while i <= 1_000_000:\n",
     "    print(i)\n",
-    "    i = i ** 2"
+    "    i = i ** 2\n",
+    "#   i *= i"
    ]
   },
   {
@@ -391,21 +392,131 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
+   "execution_count": 17,
    "metadata": {},
    "outputs": [
     {
-     "ename": "SyntaxError",
-     "evalue": "can't assign to function call (<ipython-input-15-390a44281a84>, line 1)",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-15-390a44281a84>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    for str(i) in range(1, 10):\u001b[0m\n\u001b[0m       ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m can't assign to function call\n"
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "22\n",
+      "333\n",
+      "4444\n",
+      "55555\n",
+      "666666\n",
+      "7777777\n",
+      "88888888\n",
+      "999999999\n"
      ]
     }
    ],
    "source": [
-    "for str(i in range(1, 10):\n",
-    "    print(str(i)i)"
+    "for i in range(1, 10):\n",
+    "    print(str(i) * i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### c) Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter an odd number between 1 and 50: 2\n",
+      "Enter an odd number between 1 and 50: 23\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Here is an odd number: 1\n",
+      "Here is an odd number: 3\n",
+      "Here is an odd number: 5\n",
+      "Here is an odd number: 7\n",
+      "Here is an odd number: 9\n",
+      "Here is an odd number: 11\n",
+      "Here is an odd number: 13\n",
+      "Here is an odd number: 15\n",
+      "Here is an odd number: 17\n",
+      "Here is an odd number: 19\n",
+      "Here is an odd number: 21\n",
+      "Gotcha! Skipping number:  23\n",
+      "Here is an odd number: 25\n",
+      "Here is an odd number: 27\n",
+      "Here is an odd number: 29\n",
+      "Here is an odd number: 31\n",
+      "Here is an odd number: 33\n",
+      "Here is an odd number: 35\n",
+      "Here is an odd number: 37\n",
+      "Here is an odd number: 39\n",
+      "Here is an odd number: 41\n",
+      "Here is an odd number: 43\n",
+      "Here is an odd number: 45\n",
+      "Here is an odd number: 47\n",
+      "Here is an odd number: 49\n"
+     ]
+    }
+   ],
+   "source": [
+    "while True:\n",
+    "    odd_num = input('Enter an odd number between 1 and 50:')\n",
+    "    if odd_num.isdigit():\n",
+    "        odd_num = int(odd_num)\n",
+    "        if odd_num % 2 == 0:\n",
+    "            continue\n",
+    "        break\n",
+    "               \n",
+    "num = 1\n",
+    "while num <= 50:\n",
+    "    if num == odd_num:\n",
+    "        print('Gotcha! Skipping number: ', num)\n",
+    "        num += 2\n",
+    "        continue\n",
+    "       \n",
+    "    print('Here is an odd number:', num)\n",
+    "    num += 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### d) Prompt the user to enter a positive number and write a loop that counts from 0 to that number."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a positive number greater than zero 26\n"
+     ]
+    }
+   ],
+   "source": [
+    "pos_num = int(input('Enter a positive number greater than zero'))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### e) Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from the number the user entered down to 1."
    ]
   },
   {
