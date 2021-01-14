@@ -497,19 +497,25 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 26,
+   "execution_count": 49,
    "metadata": {},
    "outputs": [
     {
      "name": "stdin",
      "output_type": "stream",
      "text": [
-      "Enter a positive number greater than zero 26\n"
+      "Enter a positive number greater than zero  13\n"
      ]
     }
    ],
    "source": [
-    "pos_num = int(input('Enter a positive number greater than zero'))"
+    "while True:\n",
+    "    pos_num = input('Enter a positive number greater than zero ')\n",
+    "    if pos_num.isdigit():\n",
+    "        pos_num = int(pos_num)\n",
+    "        if pos_num <= 0 and pos_num % 2 == 0:\n",
+    "            continue\n",
+    "        break\n"
    ]
   },
   {
@@ -517,6 +523,212 @@
    "metadata": {},
    "source": [
     "#### e) Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from the number the user entered down to 1."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "while True:\n",
+    "    pos_num = input('Enter a positive number greater than zero ')\n",
+    "    if pos_num.isdigit():\n",
+    "        pos_num = int(pos_num)\n",
+    "        if pos_num <= 0 and pos_num % 2 == 0:\n",
+    "            continue\n",
+    "        break\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 3. Fizzbuzz\n",
+    " - Write a program that prints the numbers from 1 to 100.\n",
+    " - For multiples of three print \"Fizz\" instead of the number\n",
+    " - For the multiples of five print \"Buzz\".\n",
+    " - For numbers which are multiples of both three and five print \"FizzBuzz\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "Fizz\n",
+      "4\n",
+      "Buzz\n",
+      "Fizz\n",
+      "7\n",
+      "8\n",
+      "Fizz\n",
+      "Buzz\n",
+      "11\n",
+      "Fizz\n",
+      "13\n",
+      "14\n",
+      "Fizzbuzz\n",
+      "16\n",
+      "17\n",
+      "Fizz\n",
+      "19\n",
+      "Buzz\n",
+      "Fizz\n",
+      "22\n",
+      "23\n",
+      "Fizz\n",
+      "Buzz\n",
+      "26\n",
+      "Fizz\n",
+      "28\n",
+      "29\n",
+      "Fizzbuzz\n",
+      "31\n",
+      "32\n",
+      "Fizz\n",
+      "34\n",
+      "Buzz\n",
+      "Fizz\n",
+      "37\n",
+      "38\n",
+      "Fizz\n",
+      "Buzz\n",
+      "41\n",
+      "Fizz\n",
+      "43\n",
+      "44\n",
+      "Fizzbuzz\n",
+      "46\n",
+      "47\n",
+      "Fizz\n",
+      "49\n",
+      "Buzz\n",
+      "Fizz\n",
+      "52\n",
+      "53\n",
+      "Fizz\n",
+      "Buzz\n",
+      "56\n",
+      "Fizz\n",
+      "58\n",
+      "59\n",
+      "Fizzbuzz\n",
+      "61\n",
+      "62\n",
+      "Fizz\n",
+      "64\n",
+      "Buzz\n",
+      "Fizz\n",
+      "67\n",
+      "68\n",
+      "Fizz\n",
+      "Buzz\n",
+      "71\n",
+      "Fizz\n",
+      "73\n",
+      "74\n",
+      "Fizzbuzz\n",
+      "76\n",
+      "77\n",
+      "Fizz\n",
+      "79\n",
+      "Buzz\n",
+      "Fizz\n",
+      "82\n",
+      "83\n",
+      "Fizz\n",
+      "Buzz\n",
+      "86\n",
+      "Fizz\n",
+      "88\n",
+      "89\n",
+      "Fizzbuzz\n",
+      "91\n",
+      "92\n",
+      "Fizz\n",
+      "94\n",
+      "Buzz\n",
+      "Fizz\n",
+      "97\n",
+      "98\n",
+      "Fizz\n",
+      "Buzz\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(1, 101):\n",
+    "        if i % 5 == 0 and i % 3 == 0:\n",
+    "            print('Fizzbuzz')\n",
+    "        elif i % 3 == 0:\n",
+    "            print('Fizz')\n",
+    "        elif i % 5 == 0:\n",
+    "            print ('Buzz')\n",
+    "        else: \n",
+    "            print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 4. Display a table of powers.\n",
+    "\n",
+    " - Prompt the user to enter an integer.\n",
+    " - Display a table of squares and cubes from 1 to the value entered.\n",
+    " - Ask if the user wants to continue.\n",
+    " - Assume that the user will enter valid data.\n",
+    " - Only continue if the user agrees to."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter an integer 6\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "number | squared | cubed\n",
+      "------ | ------- | -----\n",
+      "     1 |       1 |     1\n",
+      "     2 |       4 |     8\n",
+      "     3 |       9 |    27\n",
+      "     4 |      16 |    64\n",
+      "     5 |      25 |   125\n",
+      "     6 |      36 |   216\n"
+     ]
+    }
+   ],
+   "source": [
+    "user_num = int(input('Enter an integer'))\n",
+    "\n",
+    "print('number | squared | cubed')\n",
+    "print('------ | ------- | -----')\n",
+    "for i in range(1, user_num + 1):\n",
+    "    print('%6d | %7d | %5d' % (i, i**2, i**3))"
    ]
   },
   {
