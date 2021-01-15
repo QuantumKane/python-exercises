@@ -55,7 +55,7 @@ max_twenty = len(username) <= 20
 pswd_diff_from_user = password != username
 
 
-# LIST COMPREHENSION EXERCISES
+# LIST COMPREHENSION BONUS EXERCISES
 
 # 1. Make a variable named uppercased_fruits to hold the output
 uppercased_fruits = [fruit.upper() for fruit in fruits]

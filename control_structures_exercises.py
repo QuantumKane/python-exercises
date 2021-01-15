@@ -764,6 +764,8 @@
     }
    ],
    "source": [
+    "# Zach's solution\n",
+    "\n",
     "user_num = int(input('Enter an integer'))\n",
     "\n",
     "print('number | squared | cubed')\n",
