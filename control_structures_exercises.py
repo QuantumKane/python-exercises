@@ -497,25 +497,44 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 49,
+   "execution_count": 62,
    "metadata": {},
    "outputs": [
     {
      "name": "stdin",
      "output_type": "stream",
      "text": [
-      "Enter a positive number greater than zero  13\n"
+      "Enter a positive number greater than zero  7\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n"
      ]
     }
    ],
    "source": [
     "while True:\n",
-    "    pos_num = input('Enter a positive number greater than zero ')\n",
+    "    pos_num = input('Enter a positive number greater than zero: ')\n",
     "    if pos_num.isdigit():\n",
     "        pos_num = int(pos_num)\n",
-    "        if pos_num <= 0 and pos_num % 2 == 0:\n",
+    "        if pos_num <= 0:\n",
     "            continue\n",
-    "        break\n"
+    "        break\n",
+    "        \n",
+    "num = 0\n",
+    "while num <= pos_num:\n",
+    "    print(num)\n",
+    "    num += 1"
    ]
   },
   {
@@ -527,17 +546,39 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a positive number greater than zero:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "4\n",
+      "3\n",
+      "2\n",
+      "1\n"
+     ]
+    }
+   ],
    "source": [
     "while True:\n",
-    "    pos_num = input('Enter a positive number greater than zero ')\n",
+    "    pos_num = input('Enter a positive number greater than zero: ')\n",
     "    if pos_num.isdigit():\n",
     "        pos_num = int(pos_num)\n",
-    "        if pos_num <= 0 and pos_num % 2 == 0:\n",
+    "        if pos_num <= 0:\n",
     "            continue\n",
-    "        break\n"
+    "        break\n",
+    "while pos_num > 0:\n",
+    "    print(pos_num)\n",
+    "    pos_num -= 1"
    ]
   },
   {
@@ -560,7 +601,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 50,
+   "execution_count": 3,
    "metadata": {},
    "outputs": [
     {
@@ -571,113 +612,113 @@
       "2\n",
       "Fizz\n",
       "4\n",
-      "Buzz\n",
+      "5 Buzz\n",
       "Fizz\n",
       "7\n",
       "8\n",
       "Fizz\n",
-      "Buzz\n",
+      "10 Buzz\n",
       "11\n",
       "Fizz\n",
       "13\n",
       "14\n",
-      "Fizzbuzz\n",
+      "15 Fizzbuzz\n",
       "16\n",
       "17\n",
       "Fizz\n",
       "19\n",
-      "Buzz\n",
+      "20 Buzz\n",
       "Fizz\n",
       "22\n",
       "23\n",
       "Fizz\n",
-      "Buzz\n",
+      "25 Buzz\n",
       "26\n",
       "Fizz\n",
       "28\n",
       "29\n",
-      "Fizzbuzz\n",
+      "30 Fizzbuzz\n",
       "31\n",
       "32\n",
       "Fizz\n",
       "34\n",
-      "Buzz\n",
+      "35 Buzz\n",
       "Fizz\n",
       "37\n",
       "38\n",
       "Fizz\n",
-      "Buzz\n",
+      "40 Buzz\n",
       "41\n",
       "Fizz\n",
       "43\n",
       "44\n",
-      "Fizzbuzz\n",
+      "45 Fizzbuzz\n",
       "46\n",
       "47\n",
       "Fizz\n",
       "49\n",
-      "Buzz\n",
+      "50 Buzz\n",
       "Fizz\n",
       "52\n",
       "53\n",
       "Fizz\n",
-      "Buzz\n",
+      "55 Buzz\n",
       "56\n",
       "Fizz\n",
       "58\n",
       "59\n",
-      "Fizzbuzz\n",
+      "60 Fizzbuzz\n",
       "61\n",
       "62\n",
       "Fizz\n",
       "64\n",
-      "Buzz\n",
+      "65 Buzz\n",
       "Fizz\n",
       "67\n",
       "68\n",
       "Fizz\n",
-      "Buzz\n",
+      "70 Buzz\n",
       "71\n",
       "Fizz\n",
       "73\n",
       "74\n",
-      "Fizzbuzz\n",
+      "75 Fizzbuzz\n",
       "76\n",
       "77\n",
       "Fizz\n",
       "79\n",
-      "Buzz\n",
+      "80 Buzz\n",
       "Fizz\n",
       "82\n",
       "83\n",
       "Fizz\n",
-      "Buzz\n",
+      "85 Buzz\n",
       "86\n",
       "Fizz\n",
       "88\n",
       "89\n",
-      "Fizzbuzz\n",
+      "90 Fizzbuzz\n",
       "91\n",
       "92\n",
       "Fizz\n",
       "94\n",
-      "Buzz\n",
+      "95 Buzz\n",
       "Fizz\n",
       "97\n",
       "98\n",
       "Fizz\n",
-      "Buzz\n"
+      "100 Buzz\n"
      ]
     }
    ],
    "source": [
     "for i in range(1, 101):\n",
     "        if i % 5 == 0 and i % 3 == 0:\n",
-    "            print('Fizzbuzz')\n",
+    "            print(i, 'Fizzbuzz')\n",
     "        elif i % 3 == 0:\n",
-    "            print('Fizz')\n",
+    "            print('Fizz') # ONLY 'fizz' per instuctions\n",
     "        elif i % 5 == 0:\n",
-    "            print ('Buzz')\n",
+    "            print (i, 'Buzz')\n",
     "        else: \n",
     "            print(i)"
    ]
@@ -729,6 +770,193 @@
     "print('------ | ------- | -----')\n",
     "for i in range(1, user_num + 1):\n",
     "    print('%6d | %7d | %5d' % (i, i**2, i**3))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 5. Convert given number grades into letter grades.\n",
+    "\n",
+    " - Prompt the user for a numerical grade from 0 to 100.\n",
+    " - Display the corresponding letter grade.\n",
+    " - Prompt the user to continue.\n",
+    " - Assume that the user will enter valid integers for the grades.\n",
+    " - The application should only continue if the user agrees to. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number grade:  45\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "F\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Do you want to continue?  y\n",
+      "Enter a number grade:  444\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Do you want to continue?  yea\n",
+      "Enter a number grade:  88\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Do you want to continue?  n\n"
+     ]
+    }
+   ],
+   "source": [
+    "while True:\n",
+    "    numeric_grade = int(input(\"Enter a number grade: \"))\n",
+    "\n",
+    "    if numeric_grade >= 88:\n",
+    "        print(\"A\")\n",
+    "    elif numeric_grade >= 80:\n",
+    "        print(\"B\")\n",
+    "    elif numeric_grade >= 67:\n",
+    "        print(\"C\")\n",
+    "    elif numeric_grade >= 60:\n",
+    "        print(\"D\")\n",
+    "    else: \n",
+    "        print(\"F\")\n",
+    "        \n",
+    "    continue_input = input(\"Do you want to continue? \")\n",
+    "    if not continue_input.lower().startswith(\"y\"):\n",
+    "        break"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 6. Create a list of dictionaries where each dictionary represents a book that you have read. Each dictionary in the list should have the keys title, author, and genre. Loop through the list and print out information about each book."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[{'title': 'Dune', 'author': 'Frank Herbert', 'genre': 'Science Fiction'},\n",
+       " {'title': \"Lord Foul's Bane\",\n",
+       "  'author': 'Stephen R Donaldson',\n",
+       "  'genre': 'Fantasy'},\n",
+       " {'title': 'The Great Shark Hunt',\n",
+       "  'author': 'Hunter S Thompson',\n",
+       "  'genre': 'Journalism'},\n",
+       " {'title': 'God Emperor of Dune',\n",
+       "  'author': 'Frank Herbert',\n",
+       "  'genre': 'Science Fiction'}]"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "books = [\n",
+    "    {\"title\": \"Dune\", \"author\": \"Frank Herbert\", \"genre\": \"Science Fiction\"},\n",
+    "    {\"title\": \"Lord Foul's Bane\", \"author\": \"Stephen R Donaldson\", \"genre\": \"Fantasy\"},\n",
+    "    {\"title\": \"The Great Shark Hunt\", \"author\": \"Hunter S Thompson\", \"genre\": \"Journalism\"},\n",
+    "    {\"title\": \"God Emperor of Dune\", \"author\": \"Frank Herbert\", \"genre\": \"Science Fiction\"}\n",
+    "]\n",
+    "\n",
+    "list(books)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 6a) Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a genre:  Fantasy\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "--------------\n",
+      "Title: Lord Foul's Bane\n",
+      "Author: Stephen R Donaldson\n",
+      "Genre: Fantasy\n",
+      "--------------\n",
+      "Title: The Hobbit\n",
+      "Author: JRR Tolkien\n",
+      "Genre: Fantasy\n"
+     ]
+    }
+   ],
+   "source": [
+    "books = [\n",
+    "    {\"title\": \"Dune\", \"author\": \"Frank Herbert\", \"genre\": \"Science Fiction\"},\n",
+    "    {\"title\": \"Lord Foul's Bane\", \"author\": \"Stephen R Donaldson\", \"genre\": \"Fantasy\"},\n",
+    "    {\"title\": \"The Great Shark Hunt\", \"author\": \"Hunter S Thompson\", \"genre\": \"Journalism\"},\n",
+    "    {\"title\": \"The Hobbit\", \"author\": \"JRR Tolkien\", \"genre\": \"Fantasy\"},\n",
+    "    {\"title\": \"God Emperor of Dune\", \"author\": \"Frank Herbert\", \"genre\": \"Science Fiction\"}\n",
+    "]\n",
+    "\n",
+    "select_genre = input(\"Enter a genre: \")\n",
+    "select_books = [book for book in books if book['genre'] == select_genre]\n",
+    "\n",
+    "for book in select_books:\n",
+    "    print(\"--------------\")\n",
+    "    print(f\"Title: {book['title']}\")\n",
+    "    print(f\"Author: {book['author']}\")\n",
+    "    print(f\"Genre: {book['genre']}\")\n",
+    "    "
    ]
   },
   {
