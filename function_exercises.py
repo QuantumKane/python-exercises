@@ -149,14 +149,29 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 50,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1000000"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "# 7. Define a function named handle_commas. It should accept a string that is a \n",
     "# number that contains commas in it as input, and return a number as output.\n",
     "\n",
-    "def handle_commas(input)"
+    "def handle_commas(input):\n",
+    "    input = input.replace(',', '')\n",
+    "    return int(input)\n",
+    "\n",
+    "handle_commas('1,000,000')"
    ]
   },
   {
@@ -224,9 +239,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 57,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'steve_kane'"
+      ]
+     },
+     "execution_count": 57,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "# 10. Define a function named normalize_name. It should accept a string and return a \n",
     "# valid python identifier, that is:\n",
@@ -235,8 +261,25 @@
     "# - everything should be lowercase\n",
     "# - spaces should be replaced with underscores\n",
     "\n",
-    "def normalize_name():"
+    "def normalize_name(name):\n",
+    "    \n",
+    "    name = name.strip()\n",
+    "    name = name.lower()\n",
+    "    name = name.replace(' ', '_')\n",
+    "    \n",
+    "    \n",
+    "    if name.isidentifier() == True:\n",
+    "        return name\n",
+    "\n",
+    "normalize_name('    Steve Kane ')"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
