@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 1,
    "metadata": {},
    "outputs": [
     {
@@ -12,7 +12,7 @@
      "traceback": [
       "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
       "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[0;32m<ipython-input-9-af6a7501c7e9>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# 1. Import and test 3 of the functions from your functions exercise file.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0;32mimport\u001b[0m \u001b[0mfunction_exercises\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mpy\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mis_vowel\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;32m<ipython-input-1-b02b3c6e0671>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# 1. Import and test 3 of the functions from your functions exercise file.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0;32mimport\u001b[0m \u001b[0mfunction_exercises\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mis_vowel\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
       "\u001b[0;32m~/codeup-data-science/python-exercises/function_exercises.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m     92\u001b[0m   {\n\u001b[1;32m     93\u001b[0m    \u001b[0;34m\"cell_type\"\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;34m\"code\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 94\u001b[0;31m    \u001b[0;34m\"execution_count\"\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0mnull\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     95\u001b[0m    \u001b[0;34m\"metadata\"\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;34m{\u001b[0m\u001b[0;34m}\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     96\u001b[0m    \u001b[0;34m\"outputs\"\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
       "\u001b[0;31mNameError\u001b[0m: name 'null' is not defined"
      ]
@@ -57,14 +57,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 4,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "<itertools.permutations object at 0x7fc4ed890b30>\n"
+      "<itertools.permutations object at 0x7f9d07f8a650>\n"
      ]
     }
    ],
@@ -74,7 +74,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 5,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -83,7 +83,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 11,
    "metadata": {},
    "outputs": [
     {
@@ -595,14 +595,125 @@
        "  'favoriteFruit': 'strawberry'}]"
       ]
      },
-     "execution_count": 8,
+     "execution_count": 11,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
     "profiles = open('profiles.json')\n",
-    "json.load(profiles)"
+    "list_of_profiles = json.load(profiles)\n",
+    "list_of_profiles"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "19"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#1. Number of users\n",
+    "\n",
+    "total_users = len(list_of_profiles)\n",
+    "total_users"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "9"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# 2. Active users\n",
+    "active_users = len([user for user in list_of_profiles if user[\"isActive\"]])\n",
+    "active_users"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'_id': '54e23c3e46ab53a440b580e8',\n",
+       " 'index': 0,\n",
+       " 'guid': '9962b468-ef3e-4993-b677-617469bc3008',\n",
+       " 'isActive': False,\n",
+       " 'balance': '$2,097.02',\n",
+       " 'picture': 'http://placehold.it/32x32',\n",
+       " 'age': 39,\n",
+       " 'eyeColor': 'blue',\n",
+       " 'name': 'Hebert Estes',\n",
+       " 'gender': 'male',\n",
+       " 'company': 'ANDRYX',\n",
+       " 'email': 'hebertestes@andryx.com',\n",
+       " 'phone': '+1 (866) 456-2268',\n",
+       " 'address': '121 Emmons Avenue, Klondike, Kentucky, 5975',\n",
+       " 'about': 'Sit cillum deserunt irure laboris tempor fugiat laboris. Amet commodo amet est incididunt. Dolore qui fugiat cillum pariatur dolore excepteur elit ipsum.\\r\\n',\n",
+       " 'registered': '2014-11-10T01:44:03 +06:00',\n",
+       " 'latitude': -80.157843,\n",
+       " 'longitude': 161.93016,\n",
+       " 'tags': ['sit', 'occaecat', 'non', 'ea', 'sit', 'laboris', 'exercitation'],\n",
+       " 'friends': [{'id': 0, 'name': 'Tanisha Leonard'},\n",
+       "  {'id': 1, 'name': 'Dennis Wilson'},\n",
+       "  {'id': 2, 'name': 'Lupe Howe'}],\n",
+       " 'greeting': 'Hello, Hebert Estes! You have 4 unread messages.',\n",
+       " 'favoriteFruit': 'strawberry'}"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_of_profiles[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# 3. Inactive users\n",
+    "inactive_users = len([user for user in list_of_profiles if not user[\"isActive\"]])\n",
+    "inactive_users"
    ]
   },
   {
