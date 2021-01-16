@@ -34,10 +34,10 @@ signature string -> string
 
 def capitalize_consonant(word):
     first_letter = word[0]
-       if is_consonant(first_letter):
-           return word.capitalize()
-       else:
-           return word
+    if is_consonant(first_letter):
+        return word.capitalize()
+    else:
+        return word
     
 """
 5. Define a function named calculate_tip. It should accept a tip percentage 

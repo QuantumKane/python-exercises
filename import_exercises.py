@@ -2,26 +2,123 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 10,
    "metadata": {},
-   "outputs": [
-    {
-     "ename": "IndentationError",
-     "evalue": "unexpected indent (function_exercises.py, line 37)",
-     "output_type": "error",
-     "traceback": [
-      "Traceback \u001b[0;36m(most recent call last)\u001b[0m:\n",
-      "  File \u001b[1;32m\"/usr/local/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py\"\u001b[0m, line \u001b[1;32m3326\u001b[0m, in \u001b[1;35mrun_code\u001b[0m\n    exec(code_obj, self.user_global_ns, self.user_ns)\n",
-      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-1-22d0ee2be0e1>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0;36m, in \u001b[0;35m<module>\u001b[0;36m\u001b[0m\n\u001b[0;31m    from function_exercises import is_two\u001b[0m\n",
-      "\u001b[0;36m  File \u001b[0;32m\"/Users/stevekane/codeup-data-science/python-exercises/function_exercises.py\"\u001b[0;36m, line \u001b[0;32m37\u001b[0m\n\u001b[0;31m    if is_consonant(first_letter):\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unexpected indent\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "# 1. Import and test 3 of the functions from your functions exercise file.\n",
     "\n",
-    "from function_exercises import is_two"
+    "import function_exercises as fc\n",
+    "from function_exercises import capitalize_consonant\n",
+    "from function_exercises import calculate_tip as tip_calc"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fc.is_two(3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fc.is_vowel('A')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fc.is_consonant('C')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Steve'"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "capitalize_consonant('steve')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12.5"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tip_calc(.25, 50)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   },
   {
    "cell_type": "code",
