@@ -77,3 +77,20 @@ avg_balance(list_of_profiles)
 /*
 # 3-6. User with the lowest balance
 */
+
+def min_balance(dict):
+    balances = []
+    
+    for user in list_of_profiles:
+        balance = user['balance'].replace('$', '')
+        balance = float(balance.replace(',', ''))
+        balances.append(balance)
+        min_balance = min(balances)
+    
+    for user in list_of_profiles:
+        balance = user['balance'].replace('$', '')
+        balance = float(balance.replace(',', ''))
+        if balance == min_balance:
+            return user['name']
+        
+min_balance(list_of_profiles)
